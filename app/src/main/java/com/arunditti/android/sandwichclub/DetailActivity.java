@@ -14,6 +14,9 @@ import com.arunditti.android.sandwichclub.utils.JsonUtils;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by arunditti on 4/24/18.
  */
@@ -25,22 +28,33 @@ public class DetailActivity extends AppCompatActivity {
 
     private Sandwich sandwich;
 
-    ImageView ingredientsIv;
-    TextView also_known_as;
-    TextView place_of_origin;
-    TextView description;
-    TextView ingredients;
+//    ImageView ingredientsIv;
+//    TextView also_known_as;
+//    TextView place_of_origin;
+//    TextView description;
+//    TextView ingredients;
+
+    // “Butterknife” is a lightweight library that can be used to inject views into Android components in an easier way
+
+    @BindView(R.id.image_iv) ImageView ingredientsIv;
+    @BindView(R.id.also_known_tv) TextView also_known_as;
+    @BindView(R.id.origin_tv) TextView place_of_origin;
+    @BindView(R.id.description_tv) TextView description;
+    @BindView(R.id.ingredients_tv) TextView ingredients;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ingredientsIv = findViewById(R.id.image_iv);
-        also_known_as = findViewById(R.id.also_known_tv);
-        place_of_origin = findViewById(R.id.origin_tv);
-        description = findViewById(R.id.description_tv);
-        ingredients = findViewById(R.id.ingredients_tv);
+//        ingredientsIv = findViewById(R.id.image_iv);
+//        also_known_as = findViewById(R.id.also_known_tv);
+//        place_of_origin = findViewById(R.id.origin_tv);
+//        description = findViewById(R.id.description_tv);
+//        ingredients = findViewById(R.id.ingredients_tv);
+
+        ButterKnife.bind(this);
 
         Intent intent = getIntent();
         if (intent == null) {
@@ -70,6 +84,7 @@ public class DetailActivity extends AppCompatActivity {
         Picasso.with(this)
                 .load(sandwich.getImage())
                 .placeholder(R.drawable.ic_launcher_foreground)
+                .error(R.drawable.ic_launcher_foreground)
                 .into(ingredientsIv);
 
         setTitle(sandwich.getMainName());

@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp"
+        android:padding="@dimen/linear_layout_padding"
         tools:context="com.arunditti.android.sandwichclub.DetailActivity">
 
         <ImageView
             android:id="@+id/image_iv"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/image_height"
             android:adjustViewBounds="true"
             android:contentDescription="@string/sandwich_picture_content_description"
             android:scaleType="centerCrop" />
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/linear_layout_padding">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -36,14 +36,14 @@
                 android:id="@+id/also_known_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp" />
+                android:paddingLeft="@dimen/tv_padding_left" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/linear_layout_padding">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                 android:id="@+id/origin_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp" />
+                android:paddingLeft="@dimen/tv_padding_left" />
 
         </LinearLayout>
 
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/linear_layout_padding">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,14 +75,14 @@
                 android:id="@+id/ingredients_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp" />
+                android:paddingLeft="@dimen/tv_padding_left" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/linear_layout_padding">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
                 android:id="@+id/description_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="8dp" />
+                android:paddingLeft="@dimen/tv_padding_left" />
         </LinearLayout>
 
     </LinearLayout>
